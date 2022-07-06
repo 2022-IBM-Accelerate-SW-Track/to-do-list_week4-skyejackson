@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, TextField } from "@mui/material";
 import { DesktopDatePicker , LocalizationProvider} from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-
+import Axios from "axios";
 class AddTodo extends Component {
   // Create a local react state of the this component with both content date property set to nothing.
   constructor() {
@@ -46,6 +46,12 @@ class AddTodo extends Component {
         duedate: null
       });
     }
+    const jsonObject = {
+      id: this.state.id,
+      task: <value representing the task content>,
+      currentDate: <value representing the date/time task was added>,
+      dueDate: <value representing the date/time task is due>
+   };
   };
   render() {
     return (
